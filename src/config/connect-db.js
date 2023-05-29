@@ -6,8 +6,8 @@ const connectDB = () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then((rs) => console.log("Connected mongodb", rs))
-    .catch((err) => console.log("Unable DB", err));
+    .then((rs) => console.log("Connected mongodb"))
+    .catch((err) => console.log("Unable DB ", err));
 };
 
 module.exports = connectDB;

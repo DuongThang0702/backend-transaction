@@ -18,11 +18,12 @@ const UserSchema = new Schema(
       },
     ],
     role: { type: String, default: "user" },
-    refresh_token: { type: String, default: "" },
+    refresh_token: { type: String },
     first_name: String,
     last_name: String,
   },
   { timestamps: true }
 );
 
-module.exports = model("User", UserSchema);
+const userModel = model("User", UserSchema);
+module.exports = userModel;

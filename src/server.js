@@ -24,18 +24,5 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
-// database();
-
-const mongoose = require("mongoose");
-
-mongoose
-  .connect(
-    "mongodb+srv://duongthang0702:juYePlGOtILRTD1d@cluster0.86yye4r.mongodb.net/Store",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
-  .then((rs) => console.log("Connected mongodb", rs))
-  .catch((err) => console.log("Unable DB", err));
 initRoutes(app);
+database();
